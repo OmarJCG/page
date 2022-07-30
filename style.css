@@ -1,0 +1,474 @@
+
+:root{
+    --color-pri:#68bd44;
+    --color-sec:#2e2e2e;
+    --color-ter:#6d6b6b;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+}
+.container{
+    max-width: 1200px;
+    width: 95%;
+    margin:0 auto;
+    padding:80px 20px
+}
+
+/* Styles para el menu el header */
+.menuNav{
+    position: fixed;
+    width: 100%;
+    top:0;
+    box-shadow: 0 0 10px 1px rgba(0,0,0,0.4);
+    z-index: 10;
+    background-color: #fff;
+    transition: top 0.5s;
+}
+.nav{
+    max-width: 1220px;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding:0 10px; 
+}
+.menu{
+    display: none;
+    margin-right: 20px;
+}
+.menuBarra{
+    font-size: 40px;
+}
+.logo{
+   display: flex;
+   align-items: center;
+   width:75px;
+}
+.logo__img{
+    border-radius: 50%;
+    object-fit: cover;
+}
+.logo__subtitle{
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+.navList{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.navList__item{
+    padding: 10px;
+    list-style-type: none;
+    color: var(--color-sec);
+    font-weight:500;
+    text-align: center;
+    width: 150px;
+}
+.navList__item-a{
+    line-height: 1.5;
+    
+}
+.navList__item-a::after{
+    content: "";
+    height: 3px;
+    width: 0px;
+    background-color: var(--color-pri);
+    display: block;
+    margin:auto;
+}
+
+.navList__item-a:hover::after{
+    width: 100%;
+    transition: width 0.2s linear;
+}
+.hero.container{
+    padding: 0;
+    max-width: inherit;
+}
+.header{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-image: url(/img/pareja-2.webp);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center 60px;   
+    width: 100%;
+}
+
+.hero{
+    width: max-content;
+    height: max-content;
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    margin:auto;
+    
+}
+.heroText{
+    text-align: center;
+    color:#fff;
+    
+}
+.title{
+    font-size:2.5rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.title::after{
+    content: "";
+    display: block;
+    height: 3px;
+    background-image: linear-gradient(to right,transparent,var(--color-pri),transparent);
+    width: 450px;
+    margin:10px auto;
+}
+
+.heroText__subtitle{
+    margin-top:15px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+.heroFigure{
+    position: absolute;
+    right: 50%;
+    margin-right: -75px;
+    bottom: 0;
+}
+.heroImg{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 5px 5px rgb(104, 189, 68, 0.5); 
+}
+
+/* Estilos para el about */
+.about.container{
+    padding: 100px 20px 20px;
+}
+.titles{
+    margin-bottom:40px;
+    font-size:2.5rem;
+    color:var(--color-pri);
+}
+.aboutContent{
+    width:100%;
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto;
+}
+.about::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-image: linear-gradient(to right,transparent,var(--color-pri),transparent);
+    margin-top:35px;
+}
+.aboutFigure{
+    width: 340px;
+    margin: auto;
+    text-align: center;
+    
+}
+.aboutImg{
+    width: 90%;
+    border-radius: 10px;
+}
+.aboutText{
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.aboutText__title{
+    text-align: center;
+    color:var(--color-sec);
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.aboutText__paragraph{
+    color:var(--color-ter);
+    line-height: 1.5rem;
+    letter-spacing: .02rem;
+    text-align:justify;
+}
+.o{
+    display: block;
+    color:red;
+    text-align: center;
+    margin-top:10px;
+}
+
+/* Estiles para la tersera seciton "boys" */
+
+.titleBoys{
+    text-align: center;
+}
+.boysContent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.boysContent__item{
+    margin-bottom: 20px;
+    max-width: 350px; 
+    box-shadow: 0 0 10px 4px rgba(0,0,0,0.4);
+    border-radius: 5px;
+}
+.boysImg{
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 5px 5px 0 0;
+}
+.container-slider{
+    width: 350px;
+    height: 350px;  
+    position: relative;
+}
+.slider__item{
+    width: 350px;
+    height: 350px; 
+}
+.slider__item-img{
+    display: block;
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 5px 5px 0 0;
+}
+
+/* .slider-btn {
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    width:40px;
+    height: 40px;
+    font-size: 40px;
+    background-color: rgb(255,255,255,.3);
+    color:var(--color-sec);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+} */
+/* .slider-btn:hover{
+    background-color:rgb(255,255,255,.6); ;
+} */
+/* .slider-btn-left{
+    left: 10px;
+}
+.slider-btn-right{
+    right: 10px;
+} */
+.boysData{
+    padding: 10px 20px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.boysData__item{
+    margin-bottom: 5px;
+    color:var(--color-ter);
+}
+.data{
+    text-transform: uppercase;
+    color:var(--color-sec);
+    letter-spacing: 1px;
+    text-align: center;
+}
+.bottom{
+    width: 250px;
+    height: 50px;
+    margin: 10px auto 0;
+    border: 2px solid var(--color-pri);
+    color:var(--color-pri);
+    border-radius: 10px;
+    text-align: center;
+}
+.bottom__item{
+    display: block;
+    width: 100%;
+    line-height: 50px;
+    font-weight: 600;
+    color: inherit;
+    letter-spacing: 1px; 
+    font-size:18px; 
+}
+.bottom:hover{
+    background-color: var(--color-pri);
+    color:#fff;
+}
+/* Aciendo estilos par el footer */
+.footer{
+    background-color:#e9e6e6f2;
+}
+.footer__text{
+    text-align: center;
+}
+
+@media screen and (max-width:800px){
+    .nav{
+        padding: 0;
+    }
+    .menu{
+        display: block;
+    }
+    .navList{
+        background-image: linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%);
+        position: fixed;
+        top:60px;
+        right:0; 
+        width: 50%;
+        height: 50%;
+        background-color: var(--color-ter);
+        flex-direction: column;
+        box-shadow: -3px 3px 10px 1px rgb(0,0,0,.3);
+        clip-path: circle(0.3% at 100% 0);
+    }
+    .navList__item-a:active:after{
+        width: 100%;
+    }
+    .slider-btn:active{
+        background-color:rgb(255,255,255,.6); ;
+    }
+    .bottom:active{
+        background-color: var(--color-pri);
+        color:#fff;
+    }
+    .navListJs{
+        clip-path: circle(141.2% at 100% 0);
+    }
+    .title{
+        font-size: 25px;
+    }
+    .aboutContent{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        
+    }
+    .aboutFigure{
+        width: 100%;   
+    }
+    .aboutImg{
+        width: 200px;
+    }
+    .aboutText{
+        display: block;
+        text-align: center;
+        height:auto;
+    }
+    .o{
+        margin-top:20px;
+    }
+    .titles{
+        font-size: 30px;
+        letter-spacing: 2px;
+    }
+    .titleBoys{
+        margin-bottom: 20px;
+    }
+    .boysContent__item{
+        margin-top:20px;
+    }
+}
+@media screen and (max-width:500px) {
+    .title{
+        font-size: 20px;
+    }
+    .heroFigure{
+        right: 50%;
+        margin-right: -50px; 
+    }
+    .title::after{
+        content: "";
+        width: 200px;
+     
+    }
+    .heroImg{
+        width: 100px;
+        height: 100px;
+    }
+    .aboutText__title{
+        font-size: 20px;
+    }
+    .aboutText__paragraph{
+        font-size: 15px;
+    }
+    .o{
+        font-size: 15px;
+    }
+    .boysImg{
+        width: 250px;
+        height: 250px;
+    }
+    .boysContent__item{
+        width: 250px;
+    }
+    .container-slider{
+        width: 250px;
+        height: 250px; 
+        margin: auto;
+    }
+    .slider{
+        width: 400%;
+    }
+    .slider__item{
+        width: 250px;
+        height: 250px;
+    }
+    .slider__item-img{
+        width: 250px;
+        height: 250px;
+    }
+    .bottom{
+        width: 150px;
+        height: 50px;
+    }
+    .bottom__item{
+        line-height: 40px;   
+        font-size: 15px; 
+    }
+    
+}
+@media screen and (max-width:400px){
+    .title{
+        font-size: 15px;
+    }
+    .heroText__subtitle{
+        font-size:14px;
+    }
+    .titles{
+        font-size: 25px;
+    }
+    .aboutText__title{
+        font-size: 15px;
+    }
+    .aboutText__paragraph{
+        font-size: 13px;
+    }
+    .o{
+        font-size: 13px;
+    }
+    .boysData__item{
+        font-size: 16px;
+    }
+}
