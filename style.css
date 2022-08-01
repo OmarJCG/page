@@ -428,9 +428,9 @@ a{
         height: 250px; 
         margin: auto;
     }
-    .slider{
+    /* .slider{
         width: 400%;
-    }
+    } */
     .slider__item{
         width: 250px;
         height: 250px;
